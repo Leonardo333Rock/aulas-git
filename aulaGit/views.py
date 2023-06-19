@@ -30,3 +30,7 @@ def editado_sucesso(request):
     cliente.telefone = request.POST.get('telefone')
     cliente.save()
     return render(request,'home.html',{'id':id})
+
+
+def produtos(request):
+    return render(request,'paginas/produtos.html',{"num":[1,1,1,1,1,1,1,1,1,1]})
