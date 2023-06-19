@@ -11,3 +11,13 @@ header{
 .form-label{
     font-weight: bold;
 }
+
+.card-produto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card{
+    margin-top: 10px;
+}
