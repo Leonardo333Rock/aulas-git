@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from . models import Cliente
+from . models import Cliente, Produtos
 
 def Home(request):
     return render(request,'home.html')
-
 
 def Pagina_de_cadastro(request):
     return render(request,'paginas/pg_de_dacastro.html')
@@ -31,12 +30,10 @@ def editado_sucesso(request):
     cliente.save()
     return render(request,'home.html',{'id':id})
 
-
 def produto(request,str):
-    return render(request,'paginas/produtos.html',{"num":[1,1,1,1,1,1,1,1,1,1]})
-
-def produtos(request):
-    return render(request,'paginas/produtos.html',{"num":[1,1,1,1,1,1,1,1,1,1]})
+    pdt = str
+    produto = Produtos.objects.all()
+    return render(request,'paginas/produtos.html',{'pdt':pdt,'produto':produto})
 
 def pg_de_login(request):
     return render(request,'paginas/pagina_de_login.html')
@@ -47,8 +44,22 @@ def logar(request):
     cliente = Cliente.objects.get(email=r_email)
     if r_senha == cliente.senha:
         print(r_email,r_senha)
-        return render(request,'paginas/produtos.html',{"num":[1,1,1,1,1,1,1,1,1,1]})
+        return render(request,'paginas/produtos.html')
     else:
         print(r_email,r_senha)
         return render(request,'paginas/pagina_de_login.html')
     
+def cadastrar_produto(request):
+    return render(request,'pg_produtos/cadastro_de_produtos.html')
+
+def produto_cadastrado(request):
+        produto = Produtos()
+        produto.produto = request.POST.get("produto").upper()
+        produto.valor = request.POST.get("valor")
+        produto.quantidades = request.POST.get('quantidade')
+        produto.descricao = request.POST.get("descricao").upper()
+        produto.link_img = '#'
+        classe = request.POST.get('classe')
+        produto.classe = classe.replace(" ","_")
+        produto.save()
+        return render(request,'pg_produtos/produto_cadastrado.html',{'op':classe})

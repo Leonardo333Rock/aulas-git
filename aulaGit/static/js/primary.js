@@ -56,9 +56,21 @@ let lista_aline = [
     'Tio Pedro',
     'Tia toinha', 
     'Thiago',
-    'Fabricia e família',
-    'Padrinho Chico' ,
-    'Madrinha sidileila']
+    'Fabricia e família', 
+    'marido',
+'    Padrinho Chico',
+    'esposa',
+    'Madrinha sidileila',
+    'Tia neguinha ',
+    'esposo',
+    'Cibelly' ,
+    'Tia Marinalva',
+    'Tia Bárbara',
+    'Wilma' ,
+     'Rodrigo',
+    'Kellyane' ,
+    'Consa' ,
+    'mundin']
 
 let lista_leonardo = [
     'Jorias',
@@ -80,6 +92,14 @@ let lista_leonardo = [
     'Márcia e creche',
     'Iago',
     'Kelly',
+    'Samuel',
+    'Thalita',
+    'Shirley',
+    'Tio Rafael',
+    'Vó jesus',
+    'Luciana',
+    'Raimundo',
+    'Joel e esposa',
 
 ]
 
