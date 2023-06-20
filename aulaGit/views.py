@@ -34,3 +34,19 @@ def editado_sucesso(request):
 
 def produtos(request):
     return render(request,'paginas/produtos.html',{"num":[1,1,1,1,1,1,1,1,1,1]})
+
+
+def pg_de_login(request):
+    return render(request,'paginas/pagina_de_login.html')
+
+def logar(request):
+    r_email = request.POST.get('email')
+    r_senha = request.POST.get('senha')
+    cliente = Cliente.objects.get(email=r_email)
+    if r_senha == cliente.senha:
+        print(r_email,r_senha)
+        return render(request,'paginas/produtos.html',{"num":[1,1,1,1,1,1,1,1,1,1]})
+    else:
+        print(r_email,r_senha)
+        return render(request,'paginas/pagina_de_login.html')
+    

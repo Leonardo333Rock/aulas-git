@@ -21,3 +21,35 @@ header{
 .card{
     margin-top: 10px;
 }
+
+.login-card{
+    height: 300px;
+    width: 400px;
+    border: 1px solid #beb6b6;
+    padding: 5px;
+    border-radius: 5px ;
+    background-color: orange;
+   
+}
+
+.body{
+    display: flex;
+    justify-content:center;
+    align-items:center ;
+    width: 100%;
+    height: 100%;
+}
+
+.space{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+body{
+    background-color: rgb(28, 27, 26);
+}
+
+.color-label{
+    color: aliceblue;
+}
