@@ -34,3 +34,10 @@ def editado_sucesso(request):
 
 def produtos(request):
     return render(request,'paginas/produtos.html',{"num":[1,1,1,1,1,1,1,1,1,1]})
+
+
+def pg_de_login(request):
+    return render(request,'paginas/pagina_de_login.html')
+
+def logar(request):
+    return render(request,'paginas/produtos.html')
