@@ -3,12 +3,14 @@
 {% block content %}
 
 <div class="container card-produto">
-    {% for x in num %}
+    
+    {% for produto in produto %}
+    {% if pdt == produto.classe %}
     <div class="card" style="width: 18rem; ">
-        <img class="card-img-top" src="../../static/img/B450M.jpg" alt="Card image cap">
+        <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">{{produto.produto}}</h5>
+          <p class="card-text">{{produto.descricao}}</p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Cras justo odio</li>
@@ -20,8 +22,7 @@
           <a href="#" class="card-link">Compar</a>
         </div>
       </div>
+      {% endif %}
       {% endfor %} 
 </div>
-
-
 {% endblock %}
