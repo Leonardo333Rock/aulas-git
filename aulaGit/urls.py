@@ -11,5 +11,6 @@ urlpatterns = [
     path('logar',views.logar,name='logar'),
     path('produto/<str>',views.produto,name='produto'),
     path('cadastro_de_produtos',views.cadastrar_produto,name="cadastro_de_produtos"),
-    path('produto_cadastrado',views.produto_cadastrado,name='produto_cadastrado')
+    path('produto_cadastrado',views.produto_cadastrado,name='produto_cadastrado'),
+    path('ver_mais/<int:id>',views.ver_mais,name='ver_mais')
 ]
