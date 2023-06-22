@@ -44,7 +44,7 @@ def logar(request):
     cliente = Cliente.objects.get(email=r_email)
     if r_senha == cliente.senha:
         print(r_email,r_senha)
-        return render(request,'paginas/produtos.html')
+        return render(request,'pg_produtos/cadastro_de_produtos.html')
     else:
         print(r_email,r_senha)
         return render(request,'paginas/pagina_de_login.html')
@@ -62,7 +62,6 @@ def produto_cadastrado(request):
         classe_reple = classe.replace(" ","_")
         produto.classe = classe_reple
         produto.link_img = f"../../static/img/{classe_reple}/{request.POST.get('caminho')}"
-        
         produto.save()
         return render(request,'pg_produtos/produto_cadastrado.html',{'op':classe})
 
