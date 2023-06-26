@@ -63,7 +63,7 @@ def produto_cadastrado(request):
         produto.classe = classe_reple
         produto.link_img = f"../../static/img/{classe_reple}/{request.POST.get('caminho')}"
         produto.save()
-        return render(request,'pg_produtos/produto_cadastrado.html',{'op':classe})
+        return render(request,'pg_produtos/cadastro_de_produtos.html',{'op':classe})
 
 def ver_mais(request,id):
     produto = Produtos.objects.all()
