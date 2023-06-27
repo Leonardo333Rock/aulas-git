@@ -46,21 +46,14 @@ header{
     align-items: center;
 }
 
-body{
-    background-color: rgb(28, 27, 26);
-}
-
-.color-label{
-    color: aliceblue;
-}
-
-.border-pdt{
-    border: 2px solid red;
-    align-items: flex-start;
-
-}
 
 .car-img{
     height: 280;
     width: 120;
 }
+
+.div-conteiner{
+    display: flex; 
+    flex-wrap: wrap;
+}
+
