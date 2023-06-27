@@ -81,6 +81,7 @@ def editado_sucesso(request):
     produto.produto = request.POST.get('produto')
     produto.valor = request.POST.get('valor')
     produto.quantidades = request.POST.get('quantidade')
+    produto.descricao = request.POST.get("descricao").upper()
     classe = request.POST.get('classe')
     classe_reple = classe.replace(" ","_")
     produto.classe = classe_reple

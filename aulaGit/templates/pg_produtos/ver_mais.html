@@ -3,16 +3,16 @@
 
 {% block content %}
 <div class="container div-conteiner" >
-  <img src="{{produto.link_img}}" alt="..." class="img-thumbnail">
-  <div class="ml-5">
-    <h1 class="h1" style="font-size: 22px;">FONTE ATX C3TECH PS-200V4 200W</h1>
-  <div class="card w-75">
+  <img src="{{produto.link_img}}" alt="..." class="img-thumbnail w-25" >
+  <div>
+    <h1 class="h1" style="font-size: 22px;">{{produto.produto}}</h1>
+    <div class="card w-75">
     <div class="card-body">
       <h2 class="card-title">R$ {{produto.valor}}</h2>
-      <p class="card-text">Fonte ATX 200w</p>
+      <p class="card-text">{{produto.descricao}}</p>
       <a href="#" class="btn btn-primary">Adicionar</a>
     </div>
-  </div>
+    </div>
   </div>
 </div>
 
