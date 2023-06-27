@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . models import Cliente, Produtos
 
 def Home(request):
@@ -53,6 +53,7 @@ def cadastrar_produto(request):
     return render(request,'pg_produtos/cadastro_de_produtos.html')
 
 def produto_cadastrado(request):
+        id = Produtos.objects.all()
         produto = Produtos()
         produto.produto = request.POST.get("produto").upper()
         produto.valor = request.POST.get("valor")
@@ -61,10 +62,31 @@ def produto_cadastrado(request):
         classe = request.POST.get('classe')
         classe_reple = classe.replace(" ","_")
         produto.classe = classe_reple
-        produto.link_img = f"../../static/img/{classe_reple}/{request.POST.get('caminho')}"
+        produto.link_img = f"../../static/img/{classe_reple}/{classe_reple}{len(id)+1}.jpg"
         produto.save()
-        return render(request,'pg_produtos/cadastro_de_produtos.html',{'op':classe})
+        return render(request,'pg_produtos/cadastro_de_produtos.html')
 
 def ver_mais(request,id):
-    produto = Produtos.objects.all()
+    produto = Produtos.objects.get(id=id)
     return render(request,'pg_produtos/ver_mais.html',{'produto':produto})
+
+
+def editar_produto(request,id):
+    produto = Produtos.objects.get(id=id)
+    return render(request,'pg_produtos/editar_produto.html',{"produto":produto,"id":id})
+
+def editado_sucesso(request):
+    id = request.POST.get('id')
+    produto = Produtos.objects.get(id=id)
+    produto.produto = request.POST.get('produto')
+    produto.valor = request.POST.get('valor')
+    produto.quantidades = request.POST.get('quantidade')
+    classe = request.POST.get('classe')
+    classe_reple = classe.replace(" ","_")
+    produto.classe = classe_reple
+    produto.link_img = f"../../static/img/{classe_reple}/{classe_reple}{id}.jpg"
+    produto.save()
+    return render(request,'pg_produtos/editar_produto.html')
+
+
+    

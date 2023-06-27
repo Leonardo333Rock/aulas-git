@@ -2,23 +2,23 @@
 
 {% block content %}
 <div class="container">
-    <form action="{% url 'produto_cadastrado' %}" method="POST">
+    <form action="{% url 'editado_sucesso' %}" method="POST">
         {% csrf_token %}
         <div class="mb-3">
             <label for="formText" class="form-label color-label label_text_imput">Produto</label>
-            <input class="form-control" type="text" id="formFile" name="produto" required>
+            <input class="form-control" type="text" id="formFile" name="produto" required value="{{produto.produto}}">
         </div>
         <div class="mb-3">
             <label for="formText" class="form-label color-label label_text_imput">Valor</label>
-            <input class="form-control" type="text" id="formFile" name="valor" required>
+            <input class="form-control" type="text" id="formFile" name="valor" required value="{{produto.valor}}">
         </div>
         <div class="mb-3">
-            <label for="formText" class="form-label color-label label_text_imput">Qantidade</label>
-            <input class="form-control" type="text" id="formFile" name="quantidade" required>
+            <label for="formText" class="form-label color-label label_text_imput">Quantidades</label>
+            <input class="form-control" type="text" id="formFile" name="quantidade" required value="{{produto.quantidades}}">
         </div>
         <div class="mb-3">
-            <label for="formText" class="form-label color-label label_text_imput">Descriçao</label>
-            <input class="form-control" type="text" id="formFile" name="descricao" required>
+            <label for="formText" class="form-label color-label label_text_imput">Desceiçao</label>
+            <input class="form-control" type="text" id="formFile" name="descricao" required value="{{produto.descricao}}">
         </div>
         <div class="mb-3">
             <label for="formText" class="form-label color-label label_text_imput">Classe do Produto</label>
@@ -66,6 +66,7 @@
                 <option value="webcam">Webcam</option>
               </select>
         </div>
+        <input type="text" value="{{produto.id}}" hidden name="id">
         <button type="submit" class="btn btn-success">Cadastrar</button>
     </form>    
 </div>
