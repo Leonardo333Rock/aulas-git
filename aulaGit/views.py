@@ -90,4 +90,8 @@ def editado_sucesso(request):
     return render(request,'pg_produtos/editar_produto.html')
 
 
+def servicos(request):
+    return render(request,'pg_servicos/servicos.html')    
+
+
     
