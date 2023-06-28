@@ -5,16 +5,15 @@
 <div class="container div-conteiner" >
   <img src="{{produto.link_img}}" alt="..." class="img-thumbnail w-50" >
   <div class="ml-2">
-    <h1 class="h1" style="font-size: 22px;">{{produto.produto}}</h1>
+    <h1 class="h1" id="mensagem" style="font-size: 22px;">{{produto.produto}}</h1>
     <div class="card w-75">
     <div class="card-body">
       <h2 class="card-title">R$ {{produto.valor}}</h2>
       <p class="card-text">{{produto.descricao}}</p>
-      <a href="#" class="btn btn-primary">Adicionar</a>
-      <a href="https://web.whatsapp.com/send?phone=559984146460&text={{mensagem}}" class="btn btn-primary">Falar com o vendendor</a>
-    </div>
+      <a href="#" class="btn btn-primary  mt-1">Adicionar</a>
+      <a id="bnt" href="#" class="btn btn-primary  mt-1">Falar com o vendendor</a>
+    </div> 
     </div>
   </div>
 </div>
-
 {% endblock %}

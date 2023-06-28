@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from . models import Cliente, Produtos
-from urllib import parse, request
 
 def Home(request):
     return render(request,'home.html')
@@ -69,9 +68,7 @@ def produto_cadastrado(request):
 
 def ver_mais(request,id):
     produto = Produtos.objects.get(id=id)
-    mensagem = parse.quote(produto.descricao)
-
-    return render(request,'pg_produtos/ver_mais.html',{'produto':produto, 'mensagem': mensagem})
+    return render(request,'pg_produtos/ver_mais.html',{'produto':produto})
 
 
 def editar_produto(request,id):
