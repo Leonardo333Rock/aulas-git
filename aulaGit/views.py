@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from . models import Cliente, Produtos
+from static.modulos import formato as f
 
 def Home(request):
     return render(request,'home.html')
@@ -68,7 +69,12 @@ def produto_cadastrado(request):
 
 def ver_mais(request,id):
     produto = Produtos.objects.get(id=id)
-    return render(request,'pg_produtos/ver_mais.html',{'produto':produto})
+    valor_formatato = f.formatar_valor_br(produto.valor)
+    valor = valor_formatato.split(',')
+    valor[1] = valor[1] if valor[1] != '0' else ",00"
+    valor2 = valor[0]+valor[1]
+
+    return render(request,'pg_produtos/ver_mais.html',{'produto':produto,'valor':valor2})
 
 
 def editar_produto(request,id):
