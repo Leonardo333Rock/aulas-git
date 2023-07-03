@@ -5,7 +5,7 @@
 <div class="container card-produto">
     {% for produto in produto %}
     {% if pdt == produto.classe %}
-    <div class="card " style="width: 18rem; ">
+    <div id="produto" class="card " style="width: 18rem; ">
         <img class="card-img-top w-100" src="{{produto.link_img}}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{produto.produto}}</h5>
@@ -16,7 +16,7 @@
         </ul>
         <div class="card-body">
           <a href="/ver_mais/{{produto.id}}" class="card-link">Ver mais</a>
-          <a href="#" class="card-link">Adicionar</a>
+          <button id="adicionar1" class="bnt btn-success">Adicionar</button>
         </div>
       </div>
       {% endif %}

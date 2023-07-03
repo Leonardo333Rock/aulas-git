@@ -53,3 +53,7 @@ header{
     flex-wrap: wrap;
 }
 
+
+.carro{
+     position: fixed;
+}
