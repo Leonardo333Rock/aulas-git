@@ -97,7 +97,5 @@ def editado_sucesso(request):
 
 
 def servicos(request):
-    return render(request,'pg_servicos/servicos.html')    
+    return render(request,'pg_servicos/servicos.html')  
 
-
-    

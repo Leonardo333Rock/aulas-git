@@ -1,4 +1,5 @@
 {% extends 'home.html' %}
+{% load custom_filters %}
 
 {% block content %}
 
@@ -12,7 +13,7 @@
           <p class="card-text">{{produto.descricao}}</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">R$ {{produto.valor}}</li>
+          <li class="list-group-item">R$ {{produto.valor|custom_filters}}</li>
         </ul>
         <div class="card-body">
           <a href="/ver_mais/{{produto.id}}" class="card-link">Ver mais</a>
