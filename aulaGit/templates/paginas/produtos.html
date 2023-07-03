@@ -12,7 +12,7 @@
           <p class="card-text">{{produto.descricao}}</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">R$ {{produto.valor}}</li>
+          <li id="produto-floot" class="list-group-item">R$ {{produto.valor}}</li>
         </ul>
         <div class="card-body">
           <a href="/ver_mais/{{produto.id}}" class="card-link">Ver mais</a>
@@ -21,5 +21,6 @@
       </div>
       {% endif %}
       {% endfor %} 
+
 </div>
 {% endblock %}
