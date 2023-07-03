@@ -28,6 +28,10 @@ function abrirWhatsApp() {
       var webUrl = 'https://web.whatsapp.com/send?phone=' + numeroTelefone + '&text=' + encodeURIComponent(mensagem);
       window.open(webUrl);
     }
+
+    setTimeout((e)=>{
+      localStorage.clear()
+    },3000)
   }
 
   console.log(mensagem_doc)
