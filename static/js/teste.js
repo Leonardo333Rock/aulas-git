@@ -2,21 +2,16 @@
 var mensagem_doc = document.getElementById('mensagem').innerHTML
 
 var msg = ""
-var key = ""
-var valor = ""
-
-if(localStorage.length > 0){
-  for(var x = 0; x < localStorage.length; x++){
-    key = localStorage.key(x)
-    valor = localStorage.getItem(key)
-    msg += valor + "\n\n"
-  }  
-}else{
-  msg = mensagem_doc
-}
-
 
 function abrirWhatsApp() {
+    const arr = JSON.parse(localStorage.getItem('produto'))
+    if(localStorage.length > 0){
+      for(let x in arr){
+        msg += arr[x] + '\n\n'
+      }
+    }else{
+      msg = mensagem_doc
+    }
 
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     var numeroTelefone = '13158896468';
