@@ -54,6 +54,12 @@ header{
 }
 
 
-.carro{
-     position: fixed;
+.car{
+    width: 65px;
+    transition:linear 1s;
+    border-radius: 10px;
+}
+
+.car:hover{
+    background-color: #df830a;
 }

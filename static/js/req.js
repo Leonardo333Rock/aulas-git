@@ -15,3 +15,14 @@ req = adicionar1.map((e,i)=>{
         console.log(quantidade)
     })     
 })
+
+
+const add2 = document.getElementById('add2')
+add2.addEventListener('click',(e)=>{
+    produto = e.target.parentNode.children[0].children[1].innerHTML
+    quantidade++
+    localStorage.setItem('quantidade',quantidade)
+    localStorage.setItem('Produto'+quantidade,produto)
+    console.log(e.target.parentNode.children[0].children[0].innerHTML)
+
+})
