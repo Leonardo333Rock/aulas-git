@@ -97,5 +97,11 @@ def editado_sucesso(request):
 
 
 def servicos(request):
-    return render(request,'pg_servicos/servicos.html')  
+    return render(request,'pg_servicos/servicos.html')
+
+def carrinho(request):
+    produto = Produtos.objects.all()
+    return render(request,'pg_produtos/carrinho.html',{'produto':produto})
+
+
 

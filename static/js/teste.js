@@ -6,9 +6,12 @@ var msg = ""
 function abrirWhatsApp() {
     const arr = JSON.parse(localStorage.getItem('produto'))
     if(localStorage.length > 0){
-      for(let x in arr){
-        msg += arr[x] + '\n\n'
-      }
+      // for(let x in arr){
+      //   msg += arr[x] + '\n\n'
+      // }
+     msg1 = arr.map((e)=>{
+        msg += 'Produto: ' + e['produto'] +'\n' + 'Valor: ' +e['valor'] +'\n\n'
+     })
     }else{
       msg = mensagem_doc
     }
@@ -28,7 +31,5 @@ function abrirWhatsApp() {
       localStorage.clear()
     },3000)
   }
-
-  console.log(mensagem_doc)
   bnt = document.getElementById('bnt')
   bnt.addEventListener('click',abrirWhatsApp)

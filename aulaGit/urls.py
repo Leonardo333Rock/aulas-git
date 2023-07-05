@@ -15,6 +15,7 @@ urlpatterns = [
     path('ver_mais/<int:id>',views.ver_mais,name='ver_mais'),
     path('editar_produto/<int:id>',views.editar_produto,name="editar_produto"),
     path('editado_sucesso',views.editado_sucesso,name="editado_sucesso"),
-    path('servicos',views.servicos,name="servicos")
+    path('servicos',views.servicos,name="servicos"),
+    path('carrinho',views.carrinho,name='carrinho')
 
 ]
