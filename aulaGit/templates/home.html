@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/styler.css' %}">
     <title>{%block title %}Novatek Informatica{% endblock %}</title>
 </head>
 <body>
-    <header class="container-fluid d-flex" style="height: 80px;">
-        <h1 class="font-weight-bold h2 " style="color: orangered; text-shadow:3px 3px 7px#000;">Novatek Informática</h1>
+    <header class="container d-flex" style="height: 80px;">
+        <h1 class="font-weight-bold h1 p-2" style="color: orangered; text-shadow:3px 3px 7px#000;">Novatek Informática</h1>
         <a href="/carrinho" class="car border ml-auto p-2"><img class="w-100" src="../static/img/carrinho.png" alt=""></a>
       </header>
     <div class="container" style="margin-bottom: 20px;">
@@ -46,11 +47,9 @@
                     <a class="dropdown-item" href="/produto/desktop">Desktop</a>
                     <a class="dropdown-item" href="/produto/estabilizador">Estabilizador</a>
                     <a class="dropdown-item" href="/produto/fonte-de-alimentacao">Fonte de alimentação</a>
-                    
                     <a class="dropdown-item" href="/produto/hd-externo">HD externo</a>
                     <a class="dropdown-item" href="/produto/hd-interno">HD interno</a>
                     <a class="dropdown-item" href="/produto/scanner">HD SSD/M2</a>
-                    
                     <a class="dropdown-item" href="/produto/hub-usb">Hub USB</a>
                     <a class="dropdown-item" href="/produto/memoria-ram">Memória RAM</a>
                     <a class="dropdown-item" href="/produto/microfone">Microfone</a>
@@ -66,24 +65,22 @@
                     <a class="dropdown-item" href="/produto/teclado">Teclado</a>
                     <a class="dropdown-item" href="/produto/roteador">Roteador</a>
                     <a class="dropdown-item" href="/produto/pc-completo">PC completo</a>
-
                     <!-- <a class="dropdown-item" href="/produto/no-break">No-Break</a>
                     <a class="dropdown-item" href="/produto/pen-drive">Pen drive</a>
                     <a class="dropdown-item" href="/produto/placa-de-video">Placa de vídeo</a>
                     <a class="dropdown-item" href="/produto/placa-mae">Placa-mãe</a>
                     <a class="dropdown-item" href="/produto/processador">Processador</a>
                     <a class="dropdown-item" href="/produto/projetor">Projetor</a>
-                    
                     <a class="dropdown-item" href="/produto/scanner">Scanner</a>
                     <a class="dropdown-item" href="/produto/smartphone">Smartphone</a>
                     <a class="dropdown-item" href="/produto/switch">Switch</a> -->
 
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Mais</a>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/pagina_de_cadastro">Cadastro</a>
+                  <a class="nav-link" hidden href="/pagina_de_cadastro">Cadastro</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
@@ -114,9 +111,76 @@
     </div>
 
     {% endblock %}
-    <script src="{% static 'js/teste.js' %}"></script>
-  <script src="{% static 'js/formatar_home.js' %}"></script>
-  <script src="{% static 'js/req.js' %}"></script>
+
+    <footer class="text-center text-lg-start bg-dark text-light"  style="margin-top: 25px;">
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <div class="me-5 d-none d-lg-block">
+          <span>Fale com algum de nossos vendendores:</span>
+        </div>
+        <div class="d-flex">
+          <a href="https://web.whatsapp.com/send?phone=13158896468&text=Ola%2C%20gostaria%20de%20algumas%20informa%C3%A7oes%20sobre%20alguns%20produtos%20que%20vi%20no%20site." target="_blank" class="me-4 text-reset">
+            <img class="" style="height: 60px; width: 45px;" src="../static/svg/whatsapp.svg"alt="">
+          </a>
+          <a href="https://instagram.com/novatekitz?igshid=MzRlODBiNWFlZA==" target="_blank" class="me-4 text-reset">
+            <img class="" style="height: 60px; width: 45px;" src="../static/svg/instagram.svg"alt="">
+          </a>
+        </div>
+
+      </section>
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>NOVATEK INFORMATICA LTDA
+              </h6>
+              <p>
+                Novatek Informática: Inovando soluções tecnológicas para impulsionar o seu sucesso.
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                Produtos
+              </h6>
+              <p>
+                <a href="/produto/bonecos" class="text-reset">Bonecos</a>
+              </p>
+              <p>
+                <a href="/produto/mouse" class="text-reset">Mouses</a>
+              </p>
+              <p>
+                <a href="/produto/headset" class="text-reset">Headsets</a>
+              </p>
+              <p>
+                <a href="/produto/teclado" class="text-reset">Teclados</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
+              <p><i class="fas fa-home me-3"></i> Imperatriz, MA 611, BR</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                novatekinformatica@gmail.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> (99) 9 8414-6460</p>
+              <p><i class="fas fa-print me-3"></i> (99) 3523-4204</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2009 Copyright:
+        <a class="text-reset fw-bold" href="http://novatekinformatica.pythonanywhere.com/">Novatek.com</a>
+      </div>
+
+    </footer>
+    
+<script src="{% static 'js/teste.js' %}"></script>
+<script src="{% static 'js/formatar_home.js' %}"></script>
+<script src="{% static 'js/req.js' %}"></script>
+
+
 
 
 
