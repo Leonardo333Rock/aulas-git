@@ -69,3 +69,16 @@ header{
     background-color: #df830a;
 
 }
+
+
+.qt{
+    text-align: center;
+    background-color: green;
+    position: absolute; 
+    top: 1px;
+    border: 1px solid; 
+    border-radius: 50px; 
+    color: #000; 
+    width: 24px; 
+    height: 24px;
+}

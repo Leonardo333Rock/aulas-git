@@ -1,5 +1,5 @@
 const adicionar1 = [...document.querySelectorAll('#produto-floot')]
-
+const carro = document.getElementById('carro')
 if(!localStorage.length != '0'){
     var pdt = []
 }else{
@@ -14,8 +14,10 @@ req = adicionar1.map((e,i)=>{
         pdt.push({'produto':produto,'valor':val_formate})
         let pdt1 = JSON.stringify(pdt)
         localStorage.setItem('produto',pdt1)
-        
-        
+        const arr = JSON.parse(localStorage.getItem('produto'))
+        carro.innerHTML = arr.length
+
+
     })     
 })
 
@@ -27,4 +29,7 @@ add2.addEventListener('click',(e)=>{
     pdt.push({'produto':produto,'valor':vl_formate})
     let pdt1 = JSON.stringify(pdt)
     localStorage.setItem('produto',pdt1)
+    const arr = JSON.parse(localStorage.getItem('produto'))
+    carro.innerHTML = arr.length
+
 })

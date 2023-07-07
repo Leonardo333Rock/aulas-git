@@ -6,9 +6,6 @@ var msg = ""
 function abrirWhatsApp() {
     const arr = JSON.parse(localStorage.getItem('produto'))
     if(localStorage.length > 0){
-      // for(let x in arr){
-      //   msg += arr[x] + '\n\n'
-      // }
      msg1 = arr.map((e)=>{
         msg += 'Produto: ' + e['produto'] +'\n' + 'Valor: ' +e['valor'] +'\n\n'
      })

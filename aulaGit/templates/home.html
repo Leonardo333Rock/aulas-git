@@ -13,7 +13,7 @@
 <body>
     <header class="container d-flex" style="height: 80px;">
         <h1 class="font-weight-bold h1 p-2" style="color: orangered; text-shadow:3px 3px 7px#000;">Novatek Informática</h1>
-        <a href="/carrinho" class="car border ml-auto p-2"><img class="w-100" src="../static/img/carrinho.png" alt=""></a>
+        <a href="/carrinho" class="car border ml-auto p-2"><img class="w-100" src="../static/img/carrinho.png" alt=""><span id="carro" class="qt"></span></a>
       </header>
     <div class="container" style="margin-bottom: 20px;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -180,10 +180,13 @@
 <script src="{% static 'js/teste.js' %}"></script>
 <script src="{% static 'js/formatar_home.js' %}"></script>
 <script src="{% static 'js/req.js' %}"></script>
+<script>
+window.addEventListener('load',()=>{
+    const arr = JSON.parse(localStorage.getItem('produto'))
 
+    carro.innerHTML = arr.length
+})
 
-
-
-
+</script>
 </body> 
 </html>
