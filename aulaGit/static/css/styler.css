@@ -60,9 +60,14 @@ header{
 
 
 .car{
-    width: 65px;
+    width: 45px;
     transition:linear 1s;
     border-radius: 10px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    
 }
 
 .car:hover{
@@ -74,11 +79,19 @@ header{
 .qt{
     text-align: center;
     background-color: green;
-    position: absolute; 
-    top: 1px;
+    position: absolute;
+    top: -5px;
+    left: -10px;
     border: 1px solid; 
     border-radius: 50px; 
     color: #000; 
-    width: 24px; 
-    height: 24px;
+    width: 19px; 
+    height: 19px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.div_car{
+    height: 45px;
+    width: 45px;
 }
