@@ -1,14 +1,12 @@
 
 var mensagem_doc = document.getElementById('mensagem').innerHTML
 
-var msg = ""
+
 
 function abrirWhatsApp() {
+    var msg = ""
     const arr = JSON.parse(localStorage.getItem('produto'))
     if(localStorage.length > 0){
-      // for(let x in arr){
-      //   msg += arr[x] + '\n\n'
-      // }
      msg1 = arr.map((e)=>{
         msg += 'Produto: ' + e['produto'] +'\n' + 'Valor: ' +e['valor'] +'\n\n'
      })
@@ -31,5 +29,9 @@ function abrirWhatsApp() {
       localStorage.clear()
     },3000)
   }
-  bnt = document.getElementById('bnt')
+
+  let bnt = document.getElementById('bnt')
   bnt.addEventListener('click',abrirWhatsApp)
+
+  let b = [...document.querySelectorAll('button')]
+  console.log(b)
