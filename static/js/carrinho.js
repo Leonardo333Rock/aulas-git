@@ -21,12 +21,13 @@ produtos.map((e)=>{
     p_val = document.createElement('p')
     p_val.setAttribute('class','col h6 border border-dark')
     p_val.innerHTML =  e['valor']
-
-    vl_total += parseFloat(e['valor'])
-    valor_total.innerHTML = formatarValorUSDparaBRL(vl_total)
+    valor_for = parseFloat(e['valor'].replace(/[.]/ig,"") )
+    vl_total +=  valor_for
+    console.log(e['valor'])
+    valor_total.innerHTML = formatarValorUSDparaBRL( vl_total)
     caixa.appendChild(novo)
     novo.appendChild(p_pdt)
     novo.appendChild(p_val)
-    
+    localStorage.setItem('valor_total',formatarValorUSDparaBRL(vl_total))
 
 })

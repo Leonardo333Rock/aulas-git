@@ -1,10 +1,8 @@
-
 var mensagem_doc = document.getElementById('mensagem').innerHTML
-
-
 
 function abrirWhatsApp() {
     var msg = ""
+    var v = localStorage.getItem('valor_total')
     const arr = JSON.parse(localStorage.getItem('produto'))
     if(localStorage.length > 0){
      msg1 = arr.map((e)=>{
@@ -16,7 +14,7 @@ function abrirWhatsApp() {
 
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     var numeroTelefone = '13158896468';
-    var mensagem = msg
+    var mensagem = msg + "_________________________\nVALOR TOTAL: " + v
     if (isMobile) {
       var url = 'whatsapp://send?phone=' + numeroTelefone + '&text=' + encodeURIComponent(mensagem);
       window.location.href = url;
@@ -33,5 +31,3 @@ function abrirWhatsApp() {
   let bnt = document.getElementById('bnt')
   bnt.addEventListener('click',abrirWhatsApp)
 
-  let b = [...document.querySelectorAll('button')]
-  console.log(b)
