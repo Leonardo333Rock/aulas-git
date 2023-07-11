@@ -95,3 +95,13 @@ header{
     height: 45px;
     width: 45px;
 }
+
+
+.sli{
+    border-radius: 5px;
+}
+
+.valor{
+    color: red;
+    font-weight: bold;
+}
