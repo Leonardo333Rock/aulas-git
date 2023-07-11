@@ -35,8 +35,7 @@
                     Produtos
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <!-- <a class="dropdown-item" href="/produto/adaptador-bluetooth">Adaptador Bluetooth</a>
-                    
+                    <!-- 
                     <a class="dropdown-item" href="/produto/caixa-de-som-bluetooth">Caixa de som Bluetooth</a>
                     <a class="dropdown-item" href="/produto/caixa-de-som-portatil">Caixa de som portátil</a>
                     <a class="dropdown-item" href="/produto/cabo-de-rede">Cabo de rede</a>
@@ -55,6 +54,7 @@
                     <a class="dropdown-item" href="/produto/microfone">Microfone</a>
                     <a class="dropdown-item" href="/produto/mousepad">Mousepad</a> -->
                     <a class="dropdown-item" href="/produto/adaptador">Adaptador</a>
+                    <a class="dropdown-item" href="/produto/adaptador-wifi">Adaptador Wi-fi</a>
                     <a class="dropdown-item" href="/produto/bonecos">Bonecos</a>
                     <a class="dropdown-item" href="/produto/cadeira">Cadeira</a>
                     <a class="dropdown-item" href="/produto/caixa-de-som">Caixa de som</a>
@@ -102,6 +102,46 @@
 
     
     {% block content %}
+    <div class="container border border-dark mb-4 sli">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active w-100">
+              <img class="ml-5 d-inline w-50 p-2" src="../static/img/cadeira/cadeira193.jpg" alt="First slide">
+              <div class="m-5 d-inline-block"> 
+                <h1 class="h3">PROMOÇÃO</h1>
+                <p class="h6">CADEIRA GAMER THUNDERX3 BC3 VM</p>
+                <p class="">Valor: <span class="valor" >1.980,00</span></p>
+              </div> 
+          </div>
+          <div class="carousel-item w-100">
+              <img class="ml-5 d-inline w-50 p-2" src="../../static/img/mouse/mouse21.jpg" alt="Second slide">
+              <div class="m-5 d-inline-block">
+                <h1 class="h3">PROMOÇÃO</h1>
+                <p class="h6">MOUSE GAMER REDRAGON COBRA</p>
+                <p class="h6" >RGB 7 BOTÕES 10000DPI LUNAR WHITE</p>
+                <p>Valor: <span class="valor" >190,00</span></p>
+              </div>
+          </div>
+          <div class="carousel-item w-100">
+              <img class="ml-5 d-inline w-50 p-2" src="../../static/img/headset/headset47.jpg" alt="Third slide">
+              <div class="m-5 d-inline-block">
+                <h1 class="h3">PROMOÇÃO</h1>
+                <p class="h6">HEADSET FORTREK PRO H1+7.1 RGB</p>
+                <p>Valor: <span class="valor" >280,00</span></p>
+              </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
     <div class="container">
       <div class="jumbotron">
         <h1 class="display-4">Bem Vindo!</h1>
