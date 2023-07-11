@@ -6,7 +6,7 @@
     {% for produto in produto %}
     {% if pdt == produto.classe %}
     <div id="produto" class="card " style="width: 18rem; ">
-        <img class="card-img-top w-100" src="{{produto.link_img}}" alt="Card image cap">
+        <img class="card-img-top w-100" src="{{produto.link_img}}" alt="{{produto.link_img}}">
         <div class="card-body">
           <h5 class="card-title">{{produto.produto}}</h5>
           <p class="card-text">{{produto.descricao}}</p>
