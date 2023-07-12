@@ -1,33 +1,69 @@
-var produtos = JSON.parse(localStorage.getItem('produto'))
-let produto = document.getElementById('produto')
-let valor_uni = document.getElementById('valor-uni')
-let caixa = document.getElementById('caixa')
-let valor_total = document.getElementById('valor_total')
-
-let vl_total = 0
-
 function formatarValorUSDparaBRL(valorUSD) {
     const valorBRL = valorUSD.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     return valorBRL;
   }
 
+var produtos = JSON.parse(localStorage.getItem('produto'))
+var vl_total = document.getElementById('vl_total')
+var v = 0
+let carro = document.getElementById('carro')
+
 produtos.map((e)=>{
-    novo = document.createElement('div')
-    novo.setAttribute('class','container-fluid row border-dark')
-    p_pdt = document.createElement('p')
-    p_pdt.setAttribute('class','col h6 border border-dark')
-    p_pdt.innerHTML= e['produto']
+    let caixa = document.createElement('div')
+    let div_head = document.createElement('div')
+    let div_body = document.createElement('div')
+    let div_info = document.createElement('div')
 
-    p_val = document.createElement('p')
-    p_val.setAttribute('class','col h6 border border-dark')
-    p_val.innerHTML =  e['valor']
-    valor_for = parseFloat(e['valor'].replace(/[.]/ig,"") )
-    vl_total +=  valor_for
-    console.log(e['valor'])
-    valor_total.innerHTML = formatarValorUSDparaBRL( vl_total)
-    caixa.appendChild(novo)
-    novo.appendChild(p_pdt)
-    novo.appendChild(p_val)
-    localStorage.setItem('valor_total',formatarValorUSDparaBRL(vl_total))
 
+    let produto = document.createElement('p')
+    let valor = document.createElement('p')
+    let quantidade = document.createElement('p')
+    let valor_total = document.createElement('p')
+    let div_img = document.createElement('div')
+    let span_qt = document.createElement('span')
+    let span_vlt = document.createElement('span')
+    let img = document.createElement('img')
+
+    caixa.setAttribute('class','border p-2 my-2')
+
+    img.setAttribute('style',"width:100; height: 100px;")
+    img.setAttribute('src',e['img'])
+
+    div_body.setAttribute('class','row')
+    div_img.setAttribute('class','col')
+    div_info.setAttribute('class','col d-flex')
+
+    produto.setAttribute('class','m-3')
+    valor.setAttribute('class','m-3')
+    quantidade.setAttribute('class','m-3')
+    valor_total.setAttribute('class','m-3')
+
+    produto.innerHTML = e['produto']
+    valor.innerHTML = 'Valor: '+ e['valor']
+    quantidade.innerHTML = 'Quantidade '
+    valor_total.innerHTML = "Valor total: "
+    span_qt.innerHTML= "1"
+    span_vlt.innerHTML = e['valor']
+
+
+    div_info.appendChild(produto)
+    div_info.appendChild(valor)
+    div_info.appendChild(quantidade)
+    div_info.appendChild(valor_total)
+
+    quantidade.appendChild(span_qt)
+    valor_total.appendChild(span_vlt)
+
+    div_body.appendChild(div_img)
+    div_img.appendChild(img)
+    div_body.appendChild(div_info)
+    div_head.appendChild(produto)
+    caixa.appendChild(div_head)
+    caixa.appendChild(div_body)
+    carro.appendChild(caixa)
+
+    var valor_for = parseFloat(e['valor'].replace(/[.]/ig,""))
+    v += valor_for
+    localStorage.setItem('valor_total',formatarValorUSDparaBRL(v))
+    vl_total.innerHTML = formatarValorUSDparaBRL(v)
 })
