@@ -66,12 +66,13 @@
                     <a class="dropdown-item" href="/produto/notebook">Notebook</a>
                     <a class="dropdown-item" href="/produto/teclado">Teclado</a>
                     <a class="dropdown-item" href="/produto/roteador">Roteador</a>
+                    <a class="dropdown-item" href="/produto/pen-drive">Pen drive</a>
                     <a class="dropdown-item" href="/produto/pc-completo">PC completo</a>
                     <a class="dropdown-item" href="/produto/switch">Switch</a>
                     <a class="dropdown-item" href="/produto/webcam">Webcam</a>
                     
                     <!-- <a class="dropdown-item" href="/produto/no-break">No-Break</a>
-                    <a class="dropdown-item" href="/produto/pen-drive">Pen drive</a>
+                    
                     <a class="dropdown-item" href="/produto/placa-de-video">Placa de vídeo</a>
                     <a class="dropdown-item" href="/produto/placa-mae">Placa-mãe</a>
                     <a class="dropdown-item" href="/produto/processador">Processador</a>
@@ -129,6 +130,15 @@
                 <h1 class="h3">PROMOÇÃO</h1>
                 <p class="h6">HEADSET FORTREK PRO H1+7.1 RGB</p>
                 <p>Valor: <span class="valor" >280,00</span></p>
+              </div>
+          </div>
+          <div class="carousel-item w-100">
+            <img class="ml-5 d-inline w-50 p-2" src="../../static/img/bonecos/bonecos135.jpg" alt="Third slide">
+              <div class="m-5 d-inline-block">
+                <h1 class="h3">PROMOÇÃO</h1>
+                <p class="h6">DRAGON BALL Z MAJIN BUU DBZ ANIME</p>
+                <p class="h6">FIGURA FC BOO AÇÃO ESTATUETA 29C</p>
+                <p>Valor: <span class="valor" >320,00</span></p>
               </div>
           </div>
         </div>
@@ -202,7 +212,9 @@
             </div>
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
-              <p><i class="fas fa-home me-3"></i> Imperatriz, MA 611, BR</p>
+              <p><i class="fas fa-home me-3"></i> Imperatriz-MA, BR</p>
+              <p><i class="fas fa-home me-3"></i> Rua João Lisboa 611</p>
+
               <p>
                 <i class="fas fa-envelope me-3"></i>
                 novatekinformatica@gmail.com
@@ -225,9 +237,9 @@
 <script src="{% static 'js/formatar_home.js' %}"></script>
 <script src="{% static 'js/req.js' %}"></script>
 <script>
+
 window.addEventListener('load',()=>{
     const arr = JSON.parse(localStorage.getItem('produto'))
-
     carro.innerHTML = arr.length
 })
 
