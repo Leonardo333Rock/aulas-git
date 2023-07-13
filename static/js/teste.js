@@ -24,8 +24,11 @@ function abrirWhatsApp() {
     }
 
     setTimeout((e)=>{
+      location.reload(true)
       localStorage.clear()
     },3000)
+
+    
   }
 
   let bnt = document.getElementById('bnt')
