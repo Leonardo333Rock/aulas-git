@@ -104,4 +104,13 @@ def carrinho(request):
     return render(request,'pg_produtos/carrinho.html',{'produto':produto})
 
 
+def busca(request):
+    produto = Produtos.objects.all()
+    busca = request.POST.get('busca').upper()
+    print(busca)
+
+
+    return render(request,'pg_produtos/busca.html',{'produto':produto, 'busca': busca})
+
+
 
