@@ -13,7 +13,7 @@ function abrirWhatsApp() {
     }
 
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    var numeroTelefone = '13158896468';
+    var numeroTelefone = '5599984146460';
     var mensagem = msg + "_________________________\nVALOR TOTAL: " + v
     if (isMobile) {
       var url = 'whatsapp://send?phone=' + numeroTelefone + '&text=' + encodeURIComponent(mensagem);

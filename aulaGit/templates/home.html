@@ -69,14 +69,16 @@
                     <a class="dropdown-item" href="/produto/roteador">Roteador</a>
                     <a class="dropdown-item" href="/produto/pen-drive">Pen drive</a>
                     <a class="dropdown-item" href="/produto/pc-completo">PC completo</a>
+                    <a class="dropdown-item" href="/produto/placa-mae">Placa-mãe</a>
+                    <a class="dropdown-item" href="/produto/processador">Processador</a>
                     <a class="dropdown-item" href="/produto/switch">Switch</a>
                     <a class="dropdown-item" href="/produto/webcam">Webcam</a>
                     
                     <!-- 
                     
                     <a class="dropdown-item" href="/produto/placa-de-video">Placa de vídeo</a>
-                    <a class="dropdown-item" href="/produto/placa-mae">Placa-mãe</a>
-                    <a class="dropdown-item" href="/produto/processador">Processador</a>
+                    
+                    
                     <a class="dropdown-item" href="/produto/projetor">Projetor</a>
                     <a class="dropdown-item" href="/produto/scanner">Scanner</a>
                     <a class="dropdown-item" href="/produto/smartphone">Smartphone</a>
@@ -92,8 +94,8 @@
               </ul>
               <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'busca' %}">  
                 {% csrf_token %}
-                <input name="busca" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input name="busca" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
               </form>
             </div>
           </nav>
