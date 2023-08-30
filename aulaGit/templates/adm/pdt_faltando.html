@@ -13,11 +13,9 @@
         </div>
         <ul class="list-group list-group-flush">
           <li id="produto-floot" class="list-group-item v_produto">R$ {{produto.valor}}</li>
+          <li id="produto-floot" class="list-group-item">ID #{{produto.id}}</li>
+
         </ul>
-        <div class="card-body">
-          <a href="/ver_mais/{{produto.id}}" class="card-link">Ver mais</a>
-          <button id="adicionar1" class="btn btn-success">Adicionar</button>
-        </div>
       </div>
       {% endif %}
       {% endfor %}
