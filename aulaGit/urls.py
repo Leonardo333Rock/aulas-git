@@ -17,6 +17,7 @@ urlpatterns = [
     path('editado_sucesso',views.editado_sucesso,name="editado_sucesso"),
     path('servicos',views.servicos,name="servicos"),
     path('carrinho',views.carrinho,name='carrinho'),
-    path('busca',views.busca,name="busca")
+    path('busca',views.busca,name="busca"),
+    path('pdt_faltando',views.pdt_faltando,name='pdt_faltando')
 
 ]

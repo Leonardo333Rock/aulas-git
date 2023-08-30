@@ -45,7 +45,7 @@ def logar(request):
     cliente = Cliente.objects.get(email=r_email)
     if r_senha == cliente.senha:
         print(r_email,r_senha)
-        return redirect('cadastro_de_produtos')
+        return render(request,'adm/adm.html')
     else:
         print(r_email,r_senha)
         return render(request,'paginas/pagina_de_login.html')
@@ -109,8 +109,12 @@ def busca(request):
     busca = request.POST.get('busca').upper()
     print(busca)
 
-
     return render(request,'pg_produtos/busca.html',{'produto':produto, 'busca': busca})
+
+
+def pdt_faltando(request):
+    produto = Produtos.objects.all()
+    return render(request,'adm/pdt_faltando.html',{'produto':produto})
 
 
 
