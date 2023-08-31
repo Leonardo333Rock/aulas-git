@@ -18,6 +18,9 @@ urlpatterns = [
     path('servicos',views.servicos,name="servicos"),
     path('carrinho',views.carrinho,name='carrinho'),
     path('busca',views.busca,name="busca"),
-    path('pdt_faltando',views.pdt_faltando,name='pdt_faltando')
+    path('pdt_faltando',views.pdt_faltando,name='pdt_faltando'),
+    path('produto_adm/<str>',views.produto_adm,name='produto_adm'),
+    path('busca_adm',views.busca_adm,name="busca_adm"),
+
 
 ]
