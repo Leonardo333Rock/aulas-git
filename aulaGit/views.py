@@ -117,4 +117,16 @@ def pdt_faltando(request):
     return render(request,'adm/pdt_faltando.html',{'produto':produto})
 
 
+def produto_adm(request,str):
+    pdt = str
+    produto = Produtos.objects.all()
+    return render(request,'adm/produtos_adm.html',{'pdt':pdt,'produto':produto})
+
+def busca_adm(request):
+    produto = Produtos.objects.all()
+    busca = request.POST.get('busca').upper()
+    print(busca)
+    return render(request,'adm/busca_adm.html',{'produto':produto, 'busca': busca})
+
+
 
