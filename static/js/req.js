@@ -1,4 +1,6 @@
 const adicionar1 = [...document.querySelectorAll('#produto-floot')]
+
+
 const carro = document.getElementById('carro')
 if(!localStorage.length != '0'){
     var pdt = []
