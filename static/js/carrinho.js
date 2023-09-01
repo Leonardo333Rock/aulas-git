@@ -1,3 +1,54 @@
+const popup = document.querySelector('#popup')
+const gravar = document.querySelector('#ocultar')
+var mostar = document.querySelector('#mostar')
+var nome = document.querySelector('#nome')
+var cpf = document.getElementById('cpf')
+var rua = document.getElementById('rua')
+var referencia = document.getElementById('referencia')
+var cidade = document.getElementById('cidade')
+var bairro = document.getElementById('bairro')
+var numero = document.getElementById('numero')
+var close = document.getElementById('close')
+var pg = [...document.getElementsByClassName('form-check-input')]
+
+
+
+close.addEventListener('click',(e)=>{
+  popup.setAttribute('class','container-fluid ocultar')
+})
+
+gravar.addEventListener('click',(e)=>{
+  let pagamento =  pg.find(e=>e.checked)
+  console.log(pagamento.value)
+  popup.setAttribute('class','container-fluid ocultar')
+  dadosCliente = {
+    'nome':nome.value,
+    'cpf':cpf.value,
+    'rua':rua.value,
+    'referencia':referencia.value,
+    'cidade':cidade.value,
+    'bairro':bairro.value,
+    'numero':numero.value,
+    'pg':pagamento.value
+  }
+
+  localStorage.setItem('dadosCliente',JSON.stringify(dadosCliente))
+  console.log(dadosCliente)
+ 
+
+  
+
+})
+
+mostar.addEventListener('click',(e)=>{
+  if(localStorage.length > 0){
+    popup.setAttribute('class','container-fluid popup')
+  }else{
+    alert("Adicione algum item no carrinho")
+  }
+  
+})
+
 function formatarValorUSDparaBRL(valorUSD) {
     const valorBRL = valorUSD.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     return valorBRL;
