@@ -1,6 +1,12 @@
 .bg-body{
-    background-image: linear-gradient(to bottom right,rgb(191, 190, 189), rgb(252, 249, 249)) ;
+    /* background-image: linear-gradient(to bottom right,rgb(191, 190, 189), rgb(252, 249, 249)) ; */
+    background-image: url('../img/bg/bg.jpg') ;
 
+
+}
+
+.promo{
+    color: aliceblue;
 }
 
 header{
@@ -53,6 +59,10 @@ header{
     width: 120;
 }
 
+.img-promo{
+    border-radius: 20px;
+}
+
 .div-conteiner{
     display: flex; 
     flex-wrap: wrap;
@@ -60,6 +70,7 @@ header{
 
 
 .car{
+    background-color: #ddd;
     width: 45px;
     transition:linear 1s;
     border-radius: 10px;
@@ -111,4 +122,8 @@ header{
     font-weight: bold;
     font-family:"Arial";
     font-size: 18px;
+}
+
+.color-label{
+    color: aliceblue;
 }
