@@ -2,7 +2,7 @@ let link_zap = document.getElementById('link_zap')
 let hora = new Date().getHours()
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-var numeroTelefone = '5599984146460'
+var numeroTelefone = '5599991809579'
 var mensagem = ""
 console.log(hora)
 

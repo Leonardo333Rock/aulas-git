@@ -15,7 +15,7 @@ function abrirWhatsApp(){
       }
 
       var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      var numeroTelefone = '5599984146460';
+      var numeroTelefone = '5599991809579';
       var mensagem = msg + "_________________________\nVALOR TOTAL: " + v + `\nForma de pagamento: *${dadosCliente['pg']}*\n\nCliente: ${dadosCliente['nome']}\nCPF: ${dadosCliente['cpf']}\nEndereço: ${dadosCliente['rua']}, ${dadosCliente['bairro']} N° ${dadosCliente['numero']}, ${dadosCliente['cidade']}\nPonto de referencia: ${dadosCliente['referencia']}`
       if (isMobile) {
         var url = 'whatsapp://send?phone=' + numeroTelefone + '&text=' + encodeURIComponent(mensagem);
